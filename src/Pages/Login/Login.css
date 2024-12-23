@@ -1,0 +1,54 @@
+
+
+.LoginCon{
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+min-height: 15vh;
+}
+
+button{
+  outline: none;
+  border: none;
+  padding: 10px;
+  background: var(--headers);
+  margin: 10px;
+  min-width: 100px;
+  font-weight: bold;
+  border-radius: 16px;
+}
+
+input{
+  width: 260px;
+  padding: 10px;
+  background: var(--background);
+  outline: none;
+  border: 1px solid var(--border);
+  margin: 10px;
+  border-radius: 6px;
+ color: #fff;
+ display: flex;
+ flex-direction: column;
+}
+
+input:hover{
+  border: 1px solid var(--headers);
+  transition: .5s ease;
+}
+
+.Header{
+  background: linear-gradient(135ged, #fff, #333);
+  -webkit-background-clip: text;
+  color: transparant;
+  margin: 20px;
+}
+
+#Google{
+  background: #fff;
+}
+
+#Github{
+  background: #333;
+  color: #fff;
+}

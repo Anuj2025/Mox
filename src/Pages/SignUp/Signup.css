@@ -1,0 +1,15 @@
+
+
+.AuthOpen{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: colunm;
+}
+
+.AuthOpen button{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}

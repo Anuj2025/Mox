@@ -1,0 +1,48 @@
+
+
+.Banner{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.BannerImg{
+  width: 90%;
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, royalblue, skyblue);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.char {
+  display: inline-block;
+  opacity: 0; /* Initial state for animation */
+  font-size: 600;
+  font-weight: bold;
+}
+
+.loginNow{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+.createAccount{
+  width: 90%;
+  height: 260px;
+  background: var(--background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  flex-direction: column;
+  text-align: center;
+}
+
+a{
+  text-decoration: none;
+  color: #333;
+}
