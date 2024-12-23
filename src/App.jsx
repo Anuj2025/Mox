@@ -64,7 +64,7 @@ theme="dark"
     <Route path="/" element={<Home />} />
     <Route path="/createAccount" element={<CreateAccount mode="login" />} />
     <Route path="/*" element={<PageNotFound />} />
-<Route path="/product/:id" element={<Products />} />
+<Route path="/products" element={<Products />} />
 
           </Routes>
         </main>
