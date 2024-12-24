@@ -17,26 +17,17 @@ import app from "./_Auth/Firebase";
 export default function App() {
   const [loader, setLoader] = useState(true);
 
+let user;
   // Initialize AOS animations
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // Handle Firebase Authentication State
-  useEffect(() => {
-    const auth = getAuth(app);
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setLoader(false); // Set loader to false once the auth state is determined
-    });
-    return () => unsubscribe(); // Cleanup subscription
-  }, []);
-
-  // Load Content and Initialize GSAP Animations
-  useEffect(() => {
+useEffect(() => {
     const loadContent = async () => {
-      // Example of async data fetching
-      // await fetchData(); 
-      setLoader(false); // Set loader to false after loading content
+      setTimeout(() =>{
+        setLoader(false);
+      }, 1000);
     };
 
     loadContent();
@@ -47,7 +38,19 @@ export default function App() {
       { opacity: 0, y: 50 },
       { opacity: 1, y: 0, duration: 1 }
     );
+    
+    const auth = getAuth(app);
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      user = user.uid;
+    loadContent();
+    });
+    return () => unsubscribe(); 
+    
   }, []);
+  
+  
+  
+  
 
   return (
     <>
