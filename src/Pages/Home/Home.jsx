@@ -25,6 +25,8 @@ export default function Home() {
   // Authentication listener
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setLoggedUser(user ? `hello, ${user.email.split("@")[0]}` : "Hello, user!");
+
       if (user) {
         
         setElementLoggedIn(
@@ -52,7 +54,6 @@ export default function Home() {
           </div>
         );
       } else {
-        setLoggedUser("");
         setElementLoggedIn(
           <div className="createAccount">
             <h3>Start By Creating Account</h3>
@@ -108,7 +109,7 @@ export default function Home() {
           {/* Banner */}
           <div className="Banner">
             <div className="BannerImg" ref={bannerRef}>
-              Hello, {loggedUser || "User"}!
+              {loggedUser || "Hello,  user!"}
             </div>
           </div>
           {/* Login Now Section */}
