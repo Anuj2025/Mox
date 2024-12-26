@@ -31,7 +31,7 @@ const Products = () => {
     }
 
     try {
-      const docRef = doc(db, "ProductList", userId);
+      const docRef = doc(db, "ProductList", 'documentID');
       const docSnap = await getDoc(docRef);
 
       if (docSnap.exists()) {
